@@ -1,0 +1,16 @@
+genderM = ["m", "M"]
+genderF = ["f", "F"]
+def gender_blender():
+    print("what is your gender?") 
+    print("M or F") 
+    x = input()
+    if x == "stop":
+        print("Bye Bye *in the mario voice*")
+    elif x in genderM:
+        print("You are now F")
+    elif x in genderF:
+        print("You are now M")
+    else:
+        gender_blender()
+    
+gender_blender()
