@@ -1,16 +1,62 @@
+import random
+class RandomNumberGenerator:
+    def __init__(self, seed=None):
+        self.seed = seed
+        random.seed(seed)
+
+    def next(self):
+        return random.randint(1111111, 9999999)
+rng = RandomNumberGenerator()
+print(rng.next())
 genderM = ["m", "M"]
 genderF = ["f", "F"]
 def gender_blender():
+    print("lol")  
     print("what is your gender?") 
     print("M or F") 
     x = input()
     if x == "stop":
         print("Bye Bye *in the mario voice*")
     elif x in genderM:
-        print("You are now F")
+        name_blender()
     elif x in genderF:
-        print("You are now M")
+        name_blender()
     else:
         gender_blender()
+def name_blender():
+    print("What is you name?")
+    name = input()
+    word_check = ["slut", "whore", "ADM", "Ansony", "god"]
+    if name in word_check:
+        name_blender()
+        print("You are not a", name)
+    else:
+        game_act_1()
+def game_act_1():
+    print("So you got a FUN Pass to go to FUN WORLD")
+    print("and well you can chose")
+    print("1) I won't go to a place call \"fun world.\"")
+    print("2) I well go, what can go wrong?")
+    print("3) go home?")   
+    print("4)")
+    x = input()
+    if x == "1":
+        print("Well you didn't go so you wake up in a room.")
+        game_act_2()
+    elif x == "2":
+        print("You go and you even get your own room!")
+        game_act_2()
+    elif x == "3":
+        print("You start walking you get in to a room.")
+        game_act_2()       
+    elif x == "4":
+        print("you walk and find a red sign saying 4.")
+        print("you wake up in a room.")
+        game_act_2()
+    else:
+        game_act_1()
+def game_act_2():
+    print("\"well time to look.\"")
+    print("1)")
     
 gender_blender()
